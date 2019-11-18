@@ -1,0 +1,124 @@
+{% extends "base.html"%} {% block contents %}
+<div class="row mt-5">
+  <div class="col-12 text-center">
+    <h1>회원가입</h1>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-12">
+    {{ error }}
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-12">
+    <form action="." method="POST">
+      {% csrf_token%}
+      <div class="form-group">
+        <label for="username">사용자 이름</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="사용자 이름"
+          name="username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="useremail">사용자 이메일</label>
+        <input
+          type="email"
+          class="form-control"
+          id="useremail"
+          placeholder="사용자 이메일"
+          name="useremail"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">비밀번호</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="비밀번호"
+          name="password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="re-password">비밀번호 확인</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="비밀번호 확인"
+          name="re-password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="username">당신이 선호하는 여행지는?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Preferred_Place"
+          placeholder="선호여행지"
+          name="Preferred_Place"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Preferred_group">당신은 주로 누구와 여행을 갑니까?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="동행"
+          placeholder="동행"
+          name="Preferred_group"
+        />
+      </div>
+      <div class="form-group">
+        <label for="username">당신이 선호하는 여행스타일은?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Preferred_Style"
+          placeholder="선호여행지"
+          name="Preferred_Style"
+        />
+      </div>
+      <div class="form-group">
+        <label for="username">당신이 선호하는 숙박시설은?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Preferred_Accomodation"
+          placeholder="선호숙박지"
+          name="Preferred_Accomodation"
+        />
+      </div>
+      <div class="form-group">
+        <label for="username">당신이 좋아하는 여행기간은?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Preferred_term"
+          placeholder="선호여행기간"
+          name="Preferred_term"
+        />
+      </div>
+      <div class="form-group">
+        <label for="username">가장 인상깊었던 여행지는?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Best_Place"
+          placeholder="최고의 여행지"
+          name="Best_Place"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">등록</button>
+    </form>
+  </div>
+</div>
+{%endblock %}
